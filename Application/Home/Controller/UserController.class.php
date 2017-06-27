@@ -41,8 +41,8 @@ class UserController extends Controller
             if ($_GET['openid']=='') {
                 $this->assign('is_weixin',1);
                 $wechat=M('wechat')->find();
-             $url="https://open.weixin.qq.com/connect/oauth2/authorize?appid=".$wechat['appid']."&redirect_uri=http://www.caomengde.cn/Extend/weixin.php&response_type=code&scope=snsapi_userinfo&state=1#wechat_redirect";
-               echo "<script language='javascript'>window.location='".$url."'</script>";
+             //$url="https://open.weixin.qq.com/connect/oauth2/authorize?appid=".$wechat['appid']."&redirect_uri=http://bixi.buyids.net/Extend/weixin.php&response_type=code&scope=snsapi_userinfo&state=1#wechat_redirect";
+               //echo "<script language='javascript'>window.location='".$url."'</script>";
             }else{
                 $this->assign('is_weixin',2);
                 echo $_GET['openid'];
